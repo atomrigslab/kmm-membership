@@ -626,6 +626,46 @@
       "artifacts": [
         "SignedMath"
       ]
+    },
+    "/Users/brian/Work/kmm-membership/contracts/MembershipV2.sol": {
+      "lastModificationDate": 1706197484382,
+      "contentHash": "b238928b85fe7b26cf2fca54fc6a4840",
+      "sourceName": "contracts/MembershipV2.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Base64",
+        "Membership"
+      ]
     }
   }
 }
