@@ -74,7 +74,7 @@ library Base64 {
     }
 }
 
-contract Membership is ERC721EnumerableUpgradeable {
+contract MembershipV1 is ERC721EnumerableUpgradeable {
 
     uint256 public maxSupply;
     uint256 private _tokenId;

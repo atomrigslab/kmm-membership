@@ -5,6 +5,11 @@
       "address": "0xaeB0f887fe53CE4B1EB6f68Cd211D02cC502D915",
       "txHash": "0x8b9dc25742346166b5caa35f90d1adef0124ae064828270369a9091c6bc1ef94",
       "kind": "beacon"
+    },
+    {
+      "address": "0x58eCE0017be81d8eCFDCA57377ae3ad62B4141C7",
+      "txHash": "0xf99bc2d08f37ba62cfe4af1a922d92e6832fc55cc2d6ba4296c6913d64468966",
+      "kind": "beacon"
     }
   ],
   "impls": {
@@ -284,6 +289,293 @@
               "slot": "3"
             }
           ],
+          "erc7201:openzeppelin.storage.ERC721": [
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:27",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:30",
+              "offset": 0,
+              "slot": "1"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_owners",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:32",
+              "offset": 0,
+              "slot": "2"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:34",
+              "offset": 0,
+              "slot": "3"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_tokenApprovals",
+              "type": "t_mapping(t_uint256,t_address)",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:36",
+              "offset": 0,
+              "slot": "4"
+            },
+            {
+              "contract": "ERC721Upgradeable",
+              "label": "_operatorApprovals",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "src": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol:38",
+              "offset": 0,
+              "slot": "5"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "f9b7305a13a5658902652a985e3d7d7b95a64f66d090f8a686bd8c47d6957cec": {
+      "address": "0xa9565a157a4153005338eC1a8f8B2F57DDe67497",
+      "txHash": "0x818bb1a72adccb18d0eb372f3ee04d25f225fec3a0397d0c35e380d0468f1740",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "maxSupply",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "Membership",
+            "src": "contracts/MembershipV2.sol:80"
+          },
+          {
+            "label": "totalSupply",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "Membership",
+            "src": "contracts/MembershipV2.sol:81"
+          },
+          {
+            "label": "_tokenId",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "Membership",
+            "src": "contracts/MembershipV2.sol:82"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_address",
+            "contract": "Membership",
+            "src": "contracts/MembershipV2.sol:83"
+          },
+          {
+            "label": "isAggregationActive",
+            "offset": 20,
+            "slot": "3",
+            "type": "t_bool",
+            "contract": "Membership",
+            "src": "contracts/MembershipV2.sol:84"
+          },
+          {
+            "label": "isSoulboundMode",
+            "offset": 21,
+            "slot": "3",
+            "type": "t_bool",
+            "contract": "Membership",
+            "src": "contracts/MembershipV2.sol:85"
+          },
+          {
+            "label": "_baseImgUrl",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_string_storage",
+            "contract": "Membership",
+            "src": "contracts/MembershipV2.sol:86"
+          },
+          {
+            "label": "_operators",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "Membership",
+            "src": "contracts/MembershipV2.sol:95"
+          },
+          {
+            "label": "members",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_mapping(t_uint256,t_struct(Member)3280_storage)",
+            "contract": "Membership",
+            "src": "contracts/MembershipV2.sol:96"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+            "label": "mapping(address => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(ERC721Storage)108_storage": {
+            "label": "struct ERC721Upgradeable.ERC721Storage",
+            "members": [
+              {
+                "label": "_name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_symbol",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "_owners",
+                "type": "t_mapping(t_uint256,t_address)",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "_balances",
+                "type": "t_mapping(t_address,t_uint256)",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "_tokenApprovals",
+                "type": "t_mapping(t_uint256,t_address)",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "_operatorApprovals",
+                "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_struct(InitializableStorage)10_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_mapping(t_uint256,t_struct(Member)3280_storage)": {
+            "label": "mapping(uint256 => struct Membership.Member)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Member)3280_storage": {
+            "label": "struct Membership.Member",
+            "members": [
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "isExpired",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "score",
+                "type": "t_uint16",
+                "offset": 1,
+                "slot": "1"
+              },
+              {
+                "label": "imgName",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          }
+        },
+        "namespaces": {
           "erc7201:openzeppelin.storage.ERC721": [
             {
               "contract": "ERC721Upgradeable",

@@ -39,8 +39,8 @@
       ]
     },
     "/Users/brian/Work/kmm-membership/contracts/Membership.sol": {
-      "lastModificationDate": 1705188151681,
-      "contentHash": "cd0357ab846d22e2bc637b44401e08df",
+      "lastModificationDate": 1706223261382,
+      "contentHash": "a5bb83efcb2e03d27683ffd8ceae3ee3",
       "sourceName": "contracts/Membership.sol",
       "solcConfig": {
         "version": "0.8.20",
@@ -75,7 +75,7 @@
       ],
       "artifacts": [
         "Base64",
-        "Membership"
+        "MembershipV1"
       ]
     },
     "/Users/brian/Work/kmm-membership/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol": {
@@ -628,8 +628,8 @@
       ]
     },
     "/Users/brian/Work/kmm-membership/contracts/MembershipV2.sol": {
-      "lastModificationDate": 1706197484382,
-      "contentHash": "b238928b85fe7b26cf2fca54fc6a4840",
+      "lastModificationDate": 1706222550436,
+      "contentHash": "8f9a5e6aba4ffabd0c071987fc29eceb",
       "sourceName": "contracts/MembershipV2.sol",
       "solcConfig": {
         "version": "0.8.20",

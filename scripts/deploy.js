@@ -65,7 +65,7 @@ async function upgrade(beaconAddr, proxyAddr) {
   const ContractV2 = await ethers.getContractFactory("MembershipV2");
   const beacon = await upgrades.upgradeBeacon(beaconAddr, ContractV2);
   const contract2 = ContractV2.attach(proxyAddr);
-  console.log('New implementation address is ', await beacon.implementation());h
+  console.log('New implementation address is ', await beacon.implementation());
 }
 
 // We recommend this pattern to be able to use async/await everywhere
