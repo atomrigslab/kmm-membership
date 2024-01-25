@@ -196,7 +196,7 @@ contract Membership is ERC721EnumerableUpgradeable {
     }
 
  function appendDynamicAttributes(string memory imgName) internal pure returns (string memory) {
-    if (keccak256(abi.encodePacked(imgName)) == keccak256(abi.encodePacked("kmm_membership_a"))) {
+    if (keccak256(abi.encodePacked(imgName)) == keccak256(abi.encodePacked("kmm_membership_a.jpg"))) {
         return string(abi.encodePacked(
             ', "attributes": [',
             unicode'{"trait_type": "creator", "value": "Youngha Park (박영하)"}', ",",
@@ -205,7 +205,7 @@ contract Membership is ERC721EnumerableUpgradeable {
             '{"trait_type": "hommage_detail_url", "value": "https://kansong.io/img_detail.html?id=10"}',
             "]"
         ));
-    } else if (keccak256(abi.encodePacked(imgName)) == keccak256(abi.encodePacked("kmm_membership_b"))) {
+    } else if (keccak256(abi.encodePacked(imgName)) == keccak256(abi.encodePacked("kmm_membership_b.jpg"))) {
         return string(abi.encodePacked(
             ', "attributes": [',
             unicode'{"trait_type": "creator", "value": "Youngha Park (박영하)"}', ",",
@@ -214,7 +214,7 @@ contract Membership is ERC721EnumerableUpgradeable {
             '{"trait_type": "hommage_detail_url", "value": "https://kansong.io/img_detail.html?id=18"}',
             "]"
         ));
-    } else if (keccak256(abi.encodePacked(imgName)) == keccak256(abi.encodePacked("kmm_membership_c"))) {
+    } else if (keccak256(abi.encodePacked(imgName)) == keccak256(abi.encodePacked("kmm_membership_c.jpg"))) {
         return string(abi.encodePacked(
             ', "attributes": [',
             unicode'{"trait_type": "creator", "value": "Youngha Park (박영하)"}', ",",
