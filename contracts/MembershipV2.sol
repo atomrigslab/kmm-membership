@@ -233,7 +233,7 @@ contract Membership is ERC721Upgradeable {
                 ']'
             ));
         }
-        return "";
+        return '[]';
     }
 
     function _exists(uint256 tokenId) internal view returns (bool) {
@@ -284,7 +284,8 @@ contract Membership is ERC721Upgradeable {
 
     function _update(address to, uint256 tokenId, address auth) internal override returns (address) {
         if (isSoulboundMode == true) {
-            require(auth == address(0) || to == address(0), "Membership: This a Soulbound token. It cannot be transferred. It can only be burned by the token owner.");
+            address from = _ownerOf(tokenId);
+            require(from == address(0) || to == address(0), "Membership: This a Soulbound token. It cannot be transferred.");
         }
         return super._update(to, tokenId, auth);
     }
