@@ -191,9 +191,45 @@ contract MembershipV1 is ERC721EnumerableUpgradeable {
     }
 
     function getDescription() internal pure returns (string memory) {
-        string memory desc = "Kansong Metaverse Museum Membership NFTs entitle holders who own NFTs issued by KMM to special treatment. This membership NFT is more than just a membership card; it symbolizes the pride of being a Treasure Guardian, representing a special experience and responsibility. Created by the skilled graphic designer Youngha Park, this NFT is rooted in the distinctive logo of the Kansong Metaverse Museum, a creation also attributed to Park. With a modern reinterpretation, it captures the essence of the exquisite landscapes and characters from the Album of Genre Paintings by Hyewon.";
+        string memory desc = "Kansong Metaverse Museum Membership NFTs entitle holders who own NFTs issued by KMM. This membership NFT is more than just a membership card; it symbolizes the pride of being a Treasure Guardian of Traditional Korean Culture, representing a special experience and responsibility. Created by the renown graphic designer Youngha Park, this NFT is rooted in the distinctive logo of the Kansong Metaverse Museum, a work also attributed to Park. With a modern reinterpretation, it captures the essence of the exquisite characters from the Album of Genre Paintings by Hyewon in 18th century Joseon dynasty.";
         return desc;
     }
+
+ function appendDynamicAttributes(string memory imgName) internal pure returns (string memory) {
+    if (keccak256(abi.encodePacked(imgName)) == keccak256(abi.encodePacked("kmm_membership_a.jpg"))) {
+        return string(abi.encodePacked(
+            ', "attributes": [',
+            unicode'{"trait_type": "creator", "value": "Youngha Park (박영하)"}', ",",
+            unicode'{"trait_type": "hommage_korean_title", "value": "쌍검대무"}', ",",
+            '{"trait_type": "hommage_english_title", "value": "Double-sword dance by two performers"},',
+            '{"trait_type": "hommage_detail_url", "value": "https://kansong.io/img_detail.html?id=10"}',
+            "]"
+        ));
+    } else if (keccak256(abi.encodePacked(imgName)) == keccak256(abi.encodePacked("kmm_membership_b.jpg"))) {
+        return string(abi.encodePacked(
+            ', "attributes": [',
+            unicode'{"trait_type": "creator", "value": "Youngha Park (박영하)"}', ",",
+            unicode'{"trait_type": "hommage_korean_title", "value": "계변가화"}', ",",
+            '{"trait_type": "hommage_english_title", "value": "Beauties chatting beside a stream"},',
+            '{"trait_type": "hommage_detail_url", "value": "https://kansong.io/img_detail.html?id=18"}',
+            "]"
+        ));
+    } else if (keccak256(abi.encodePacked(imgName)) == keccak256(abi.encodePacked("kmm_membership_c.jpg"))) {
+        return string(abi.encodePacked(
+            ', "attributes": [',
+            unicode'{"trait_type": "creator", "value": "Youngha Park (박영하)"}', ",",
+            unicode'{"trait_type": "hommage_korean_title_1", "value": "쌍검대무"}', ",",
+            '{"trait_type": "hommage_english_title_1", "value": "Double-sword dance by two performers"},',
+            unicode'{"trait_type": "hommage_detail_url_1", "value": "https://kansong.io/img_detail.html?id=10"}', ",",
+            unicode'{"trait_type": "hommage_korean_title_2", "value": "계변가화"}', ",",
+            '{"trait_type": "hommage_english_title_2", "value": "Beauties chatting beside a stream"},',
+            '{"trait_type": "hommage_detail_url_2", "value": "https://kansong.io/img_detail.html?id=18"}',
+            "]"
+        ));
+    }
+    return "";
+}
+
 
     function _exists(uint256 tokenId) internal view returns (bool) {
         if (_ownerOf(tokenId) == address(0)) {
@@ -224,6 +260,7 @@ contract MembershipV1 is ERC721EnumerableUpgradeable {
                         img,
                         '", "score": ',
                         toString(member.score),
+                        appendDynamicAttributes(member.imgName),
                         '}'
                     )
                 )
